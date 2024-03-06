@@ -1,5 +1,9 @@
 # SOTTA: Robust Test-Time Adaptation on Noisy Data Streams
-
+~~~
+SoTTA: Robust Test-Time Adaptation on Noisy Data Streams
+Taesik Gong*, Yewon Kim*, Taeckyung Lee*, Sorn Chottananurak, and Sung-Ju Lee
+Conference on Neural Information Processing Systems (NeurIPS), 2023.
+~~~
 ## Intro
 ### TTA(Test-time adaptation)이란?
 - Test-time adaptation(TTA): 모델이 훈련된 후에도 새로운 데이터나 환경에 적응하여 성능을 향상시키는 방법  
@@ -70,4 +74,81 @@ TTA가 적용되는 상황
 ### Challenge
 - 이 문제를 해결하기 위해 SoTTA를 제안합니다. 
 - SoTTA는 (i) 모델을 업데이트할 때 노이즈 샘플을 선택하지 않는 HUS(high-confidence uniform-class sampling)을 통해 입력별 견고성을 달성하고, (ii) 노이즈 샘플로 인한 가중치 혼란에 대해 파라미터를 탄력적으로 만드는 ESM(Entropy-sharpness minimization)를 통해 파라미터별 견고성을 달성합니다
+### (i) Input-wise robustness via HUS(High-confidence Uniform class Sampling)
 
+Adaptation을 위해 샘플을 선택할 때 노이즈 샘플을 필터링하여 노이즈 샘플에 대한 입력별 견고성(robustness)을 보장하는 것임.  
+레이블 없이 노이즈 샘플을 찾는 것이 어렵기 때문에 노이즈 샘플에 대한 모델 예측의 경험적 관찰을 기반으로 한 아이디어.  
+세운 가설: 노이즈가 많은 샘플이 분포 변화로 인해 양성 샘플과 특성을 구별했으며, 이는 모델의 예측 출력을 통해 관찰할 수 있다는 것.  
+양성 샘플을 식별하는 대용으로 작동하는 두 가지 유형의 특징을 조사함.
+- 샘플들의 신뢰 분포
+- 예측된 클래스 분포
+### 분포 비교 분석
+
+첫째, 양성 샘플들에 비해 샘플들의 신뢰도가 상대적으로 낮음.  
+분포 이동(shift)이 심할수록 신뢰도가 떨어지는데(예: Far가 Near보다 신뢰도가 낮음), 이는 사전 학습된 모델이 분포 외 데이터보다 목표 분포에 대해 더 높은 신뢰도를 보인다는 이전 연구 결과와도 일치함.
+
+둘째, noisy 샘플은 예측 측면에서 왜곡되는 경우가 많으며, 모델이 올바르게 분류되지 않도록 하는 것이 목표인 Attck을 제외하고는 더 심각한 이동 Shift(예: Noise)에서 이러한 현상이 두드러진다는 것을 발견함.  
+
+이러한 skewed 분포는 p(y)의 바람직하지 않은 편향을 초래할 수 있으며 따라서 엔트로피 최소화와 같은 TTA 목표에 부정적인 영향을 미칠 수 있음. 
+
+#### HUS Solution
+
+메모리에서 예측된 클래스의 균형을 유지하면서 신뢰도 있는 샘플을 유지함. 그런 다음 메모리에서 선택된 샘플은 Adaptation에 사용됨.
+
+타깃 test 샘플 x가 주어지면 HUS는 test 샘플 x의 신뢰도를 측정함. 구체적으로 각 test 샘플 x의 신뢰도 `C(x; θ)`를 다음과 같이 정의함.
+
+~~~
+여기에 신뢰도 구하는 공식 입력
+~~~
+
+샘플의 신뢰도가 미리 정의된 임계값 `C0`보다 높으면 저장함. 이러한 방식으로 적응에 사용되는 메모리에서 신뢰도가 높은 샘플만 유지하므로 신뢰도가 낮은 노이즈 샘플의 영향을 줄임.  
+
+또한, __메모리에 데이터를 저장하는 동안 클래스 간의 균형을 유지__함.  
+**특히, 현재 test 샘플의 예측 클래스가 메모리에서 가장 유력한(널리 사용되는) 클래스가 아니라면 HUS는 가장 널리 사용되는 클래스의 한 무작위 샘플을 새 샘플로 무작위로 대체함.**  
+
+**반대로, 현재 샘플이 메모리에서 가장 유력한(널리 사용되는) 클래스에 속할 경우 HUS는 같은 클래스에 있는 랜덤 샘플 하나를 현재 샘플로 대체함.**  
+이 전략을 사용하면 클래스를 균일하게 유지할 수 있으며, 이는 노이즈가 많은 샘플을 필터링할 수 있을 뿐만 아니라 적응에 사용할 때 샘플 간의 클래스 편향을 제거하는 데 효과적이며, 이는 TTA에 유용하다는 것을 발견함.  
+
+우리는 이 두 가지 메모리 관리 전략을 통해 적응을 위한 노이즈 샘플의 영향을 효과적으로 줄일 수 있을 뿐만 아니라 편향되고 신뢰도가 낮은 샘플로 인한 모델 성능 저하를 방지하여 양성만 있는 경우의 모델 성능을 향상시킬 수 있음을 발견함.  
+
+메모리에 저장된 샘플을 사용하여 __이전 TTA 방법__에 따라 BN(Batch Normalization) 계층의 정규화 통계 및 아핀 파라미터를 업데이트함. 이는 계산 효율적일 뿐만 아니라 전체 계층을 업데이트하는 것과 비슷한 성능 향상을 보였다고 알려져 있음.  
+
+적응을 위해 노이즈가 많은 샘플을 사용하는 것을 피하는 것을 목표로 하지만, 예를 들어 양성 샘플이나 이상치(outliers)와 유사한 경우 몇 가지 노이즈가 많은 샘플을 메모리에 여전히 저장할 수 있음.  
+
+메모리 내 샘플의 시간적 분산에 robust하기 위해 메모리 내 샘플의 통계를 직접 사용하는 대신 __EMA(Exponential Moving Average, 지수 이동 평균)__을 사용하여 BN 통계(평균과 분산)를 업데이트함.  
+
+
+~~~
+* 이전 TTA 방법에 해당하는 논문은 아래를 참고
+
+[29] Shuaicheng Niu, Jiaxiang Wu, Yifan Zhang, Zhiquan Wen, Yaofo Chen, Peilin Zhao, and
+Mingkui Tan. Towards stable test-time adaptation in dynamic wild world. In The Eleventh
+International Conference on Learning Representations, 2023.
+
+[38] Dequan Wang, Evan Shelhamer, Shaoteng Liu, Bruno Olshausen, and Trevor Darrell. Tent:
+Fully test-time adaptation by entropy minimization. In International Conference on Learning
+Representations, 2021.
+
+[44] Longhui Yuan, Binhui Xie, and Shuang Li. Robust test-time adaptation in dynamic scenarios.
+In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition
+(CVPR), pages 15922–15932, June 2023.
+~~
+~~
+* EMA(Exponential Moving Average) 개념에 대한 자료는 아래를 참고
+
+- https://ganghee-lee.tistory.com/26
+
+지수 이동평균. 이 개념을 설명하기 앞서 먼저 average와 moving average를 비교해보자. 
+average는 동일시점에서 산출되는 평균 값인데 반해 moving average는 시간이라는 개념이 도입됐을때 산출되는 평균 값이다. 
+예를들어, 동전을 던지는데 9번 연속 앞면이 나오면 다음 번에는 높은 확률로 뒷면이 나올거라 기대하는 것과 같다. 
+시간이라는 개념이 도입될 경우 최근의 정보가 더 많은 영향력을 미칠 수 있기 때문이다. 
+여기서 exponential moving average란 최근 data에 지수적으로 높은 가중치를 주는 것이다.
+(ex. Momentum optimizer를 보면 오래된 data일수록 베타를 계속 곱하기때문에 지수적으로 가중치가 낮아진다.)
+
+- https://dev-jm.tistory.com/12
+- https://taek-guen.tistory.com/22
+~~~
+
+### (i) Parameter-wise robustness via entropy-sharpness minimization
+
+TODO
