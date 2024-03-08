@@ -177,6 +177,11 @@ ESM을 사용하면 noisy 데이터의 기울기 규범이 높게 유지되며 �
 [4] Pierre Foret, Ariel Kleiner, Hossein Mobahi, and Behnam Neyshabur. Sharpness-aware minimization for efficiently improving generalization. In International Conference on Learning
 Representations, 2021.
 
+Sharpness-aware minimization 관련 자료
+[UNIST 유튜브] https://youtu.be/lcNjbOHf0uo?si=dA16_4d4c_ARwZLt
+[딥러닝논문읽기모임 유튜브] https://youtu.be/iC3Y85W5tmM?si=YcO3mehbB-3_a2Yc
+[Deep Study 티스토리] https://deepseow.tistory.com/20
+
 [29] Shuaicheng Niu, Jiaxiang Wu, Yifan Zhang, Zhiquan Wen, Yaofo Chen, Peilin Zhao, and
 Mingkui Tan. Towards stable test-time adaptation in dynamic wild world. In The Eleventh
 International Conference on Learning Representations, 2023
