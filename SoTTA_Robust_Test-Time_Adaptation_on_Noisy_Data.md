@@ -158,9 +158,9 @@ average는 동일시점에서 산출되는 평균 값인데 반해 moving averag
 #### 관찰: 
 noisy 샘플을 사용한 적응은 모델이 양성 샘플에 적응하는 것을 방해하는 경우가 많다는 것을 관찰함.  
 
-여기서 핵심 질문은 모델이 노이즈가 많은 샘플에 과적합되는 것을 방지하는 방법임.  
+여기서 핵심 질문은 모델이 noisy 샘플에 과적합되는 것을 방지하는 방법임.  
 그림 6b는 다음 단락에서 설명하는 Entropy-sharpness minimization(ESM) 결과를 보여줌.  
-ESM을 사용하면 noisy 데이터의 기울기 규범이 높게 유지되며 의도한 대로 적응한 후 양성 샘플의 정확도가 향상됨.  
+**ESM을 사용하면 noisy 데이터의 기울기 규범이 높게 유지되며 의도한 대로 adapt(적응)한 후 양성 샘플의 정확도가 향상됨.  
 
 #### Solution
 모델 매개변수를 noisy 샘플과의 adaptation에 robust하게 만들기 위해서는 모델이 noisy 샘플로 인해 예상치 못한 모델 성능 저하에 회복(resilient)이 되도록 엔트로피 손실(Entropy-Loss) landscape를 더 부드럽게 해야 함.  
@@ -174,7 +174,7 @@ ESM을 사용하면 noisy 데이터의 기울기 규범이 높게 유지되며 �
 이 joint optimization problem(공동 최적화 문제)를 해결하기 위해 [29]와 유사한 **sharpness aware minimization(선명도 인식 최소화)** [4]를 따르며,  
 이는 원래 확률적 경사 하강법(SGD)과 같은 표준 최적화 알고리즘보다 모델의 generalizability(일반화 가능성)을 향상시키는 것을 목표로 함.  
 ~~~
-[4] Pierre Foret, Ariel Kleiner, Hossein Mobahi, and Behnam Neyshabur. Sharpness-aware minimization for efficiently improving generalization. In International Conference on Learning
+[4] Pierre Foret, Ariel Kleiner, Hossein Mobahi, and Behnam Neyshabur. Sharpness-aware minimization for efficiently improving generalization. In International Conference on Learning
 Representations, 2021.
 
 [29] Shuaicheng Niu, Jiaxiang Wu, Yifan Zhang, Zhiquan Wen, Yaofo Chen, Peilin Zhao, and
