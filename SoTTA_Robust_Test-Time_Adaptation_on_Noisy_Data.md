@@ -4,14 +4,14 @@ SoTTA: Robust Test-Time Adaptation on Noisy Data Streams
 Taesik Gong*, Yewon Kim*, Taeckyung Lee*, Sorn Chottananurak, and Sung-Ju Lee
 Conference on Neural Information Processing Systems (NeurIPS), 2023.
 ~~~
-## Intro
-### TTA(Test-time adaptation)이란?
+## 1. Intro
+### 1.1. TTA(Test-time adaptation)이란?
 - Test-time adaptation(TTA): 모델이 훈련된 후에도 새로운 데이터나 환경에 적응하여 성능을 향상시키는 방법  
-### 문제
+### 1.2. 문제
 실제 데이터에서는 예기치 못한 테스트 샘플이 등장할 수 있는데 이는 현재 TTA 알고리즘에 새로운 위협으로 다가올 수 있음. 즉, 테스트 데이터는 실제 환경에서 예기치 않게 다양할 수 있으며, 관련 데이터뿐만 아니라 모델의 범위를 벗어난 외부 요소도 포함할 수 있음.  
 이러한 문제를 개선하기 위해 논문에서는 SoTTA를 제안함.
 
-### SoTTA의 핵심 요소
+### 1.3. SoTTA의 핵심 요소
 SoTTA의 핵심 요소는 2가지임.  
 - input-wise robustness : 높은 신뢰도의 균등 표본 추출(잡음이 많은 표본의 영향을 효과적으로 걸러냄)
 - parameter-wise robustness : Entropy-sharpness 최소화(노이즈가 많은 샘플의 큰 그라디언트에 대해 모델 파라미터의 견고성을 향상시킴)
@@ -21,7 +21,7 @@ SoTTA의 핵심 요소는 2가지임.
 머신러닝에서 일반화(generalization)는 일부 특정 데이터만 잘 설명하는(=overfitting) 것이 아니라 범용적인 데이터도 적합한 모델을 의미한다. 즉, 잘 일반화하기 위해서는 이상치나 노이즈가 들어와도 크게 흔들리지 않아야(=robust) 한다.
 ~~~
 
-### 현 TTA의 직관적 해결책
+### 1.4. 현 TTA의 직관적 해결책
 
 TTA가 노이지한 샘플들에 대항하는 직관적인 해결책은 테스트 스트림에서 노이즈가 많은 샘플들을 선별하는 것일 것임. 현재 아래의 방법들이 있음.  
 - OOD(Out-of-distribution) detection: 샘플이 훈련 데이터와 동일한 분포에서 추출되었는지 여부를 탐지
@@ -29,25 +29,25 @@ TTA가 노이지한 샘플들에 대항하는 직관적인 해결책은 테스�
 
 그러나 이러한 방법에는 전체 훈련 데이터 배치와 레이블이 지정되지 않은 대상 데이터에 대한 액세스가 필요하며, 이는 개인 정보 보호 문제로 인해 모델이 테스트 시간에 훈련 데이터에 액세스할 수 없고 많은 데이터 배치를 저장할 수 없는 경우가 많다는 점에서 TTA 설정을 준수하지 않는 경우가 많음.  
 
-### input-wise robustness & parameter-wise robustness
+### 1.5. input-wise robustness & parameter-wise robustness
 
 - input-wise robustness는 모델이 양성 샘플로만 훈련되도록 노이즈가 많은 샘플을 필터링하는 것을 목표로 함.
 - input-wise robustness는 **HUS(High-confidence Uniform class Sampling)**을 통해 모델을 업데이트할 때 노이즈 많은 샘플을 피하도록 함.
 - parameter-wise robustness는 노이즈가 많은 샘플로 인한 큰 기울기로 인해 모델이 표류하는 것을 방지하는 방식으로 모델 가중치 업데이트하는 것을 추구함.
 - parameter-wise robustness는 **ESM(Entropy-sharpness minimization)**을 통해 노이즈가 많은 샘플로 인해 발생하는 가중치 교란에 대해 손실 환경을 더 부드럽게 만들고 파라미터를 탄력적으로 조정함.
 
-### TTA 벤치마크
+### 1.6. TTA 벤치마크
 아래 세 가지 벤치 마크들을 네 가지의 다양한 수준의 분포 변화가 있는 노이즈가 많은 시나리오(Near, Far, Attack, Nosie) SoTTA를 평가함.  
 - CIFAR10-C
 - CIFAR100-C
 - ImageNet-C
 
-## 사전 정의
-### noisy 테스트 샘플 정의
+## 2. 사전 정의
+### 2.1. noisy 테스트 샘플 정의
 target 데이터 분포에 포함되지 않은 샘플을 나타내기 위해 noisy 테스트 샘플을 정의함.  
 TTA는 일반적으로 손상된 샘플과 같은 OOD 샘플에 적응하는 것을 목표로 하기 때문에 `noisy` 용어를 사용하여 OOD(Out-of-Distribution)와 구별함.
 
-### 시나리오
+### 2.2. 시나리오
 - Benign: 잡음 표본이 없는 일반적인 TTA 학습 설정
 - Near: target 분포에서 semantic shift
 - Far: covariate shift이 명백한 severer shift
@@ -59,8 +59,8 @@ TTA는 일반적으로 손상된 샘플과 같은 OOD 샘플에 적응하는 것
 ~~~
 
 
-## 방법론
-### Problem
+## 3. 방법론
+### 3.1. Problem
 - 이전의 TTA 방법은 테스트 샘플이 양성이고 들어오는 테스트 샘플 배치에 맹목적으로 적응한다고 가정. 
 - 테스트 시간 동안 노이즈가 많은 샘플이 존재하면 아직 문헌에서 탐구되지 않은 TTA 알고리즘에 대한 성능이 크게 저하될 수 있음.
 ~~~
@@ -72,7 +72,7 @@ TTA가 적용되는 상황
 - 현존하는 해결책들은 이러한 상황에 적용하기 어려움.
 - 예를 들어, OOD(Out-of-Distribution) 탐지 연구는 모델이 테스트 시간에 고정되어 있다는 가정 하에 구축되며, OSDA(Open-set Domain Adaptation) 방법은 학습을 위해 레이블이 지정된 소스와 레이블이 지정되지 않은 대상 데이터가 필요.
 
-### Challenge
+### 3.2. Challenge
 - 이 문제를 해결하기 위해 SoTTA를 제안. 
 - SoTTA는 (i) 모델을 업데이트할 때 노이즈 샘플을 선택하지 않는 HUS(high-confidence uniform-class sampling)을 통해 입력별 견고성을 달성하고, (ii) 노이즈 샘플로 인한 가중치 혼란에 대해 파라미터를 탄력적으로 만드는 ESM(Entropy-sharpness minimization)를 통해 파라미터별 견고성(robustness)을 달성
 ### (i) Input-wise robustness via HUS(High-confidence Uniform class Sampling)
@@ -86,7 +86,7 @@ Adaptation을 위해 샘플을 선택할 때 노이즈 샘플을 필터링하여
 
 ![SoTTA_Figure5](/SoTTA_img/SoTTA_Figure5.PNG)  
 
-### 분포 비교 분석
+#### 관찰: 분포 비교 분석
 
 첫째, 양성 샘플들에 비해 샘플들의 신뢰도가 상대적으로 낮음.  
 분포 이동(shift)이 심할수록 신뢰도가 떨어지는데(예: Far가 Near보다 신뢰도가 낮음), 이는 사전 학습된 모델이 분포 외 데이터보다 목표 분포에 대해 더 높은 신뢰도를 보인다는 이전 연구 결과와도 일치함.
@@ -134,8 +134,8 @@ Representations, 2021.
 [44] Longhui Yuan, Binhui Xie, and Shuang Li. Robust test-time adaptation in dynamic scenarios.
 In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition
 (CVPR), pages 15922–15932, June 2023.
-~~
-~~
+~~~
+~~~
 * EMA(Exponential Moving Average) 개념에 대한 자료는 아래를 참고
 
 - https://ganghee-lee.tistory.com/26
@@ -151,6 +151,33 @@ average는 동일시점에서 산출되는 평균 값인데 반해 moving averag
 - https://taek-guen.tistory.com/22
 ~~~
 
-### (i) Parameter-wise robustness via entropy-sharpness minimization
+### (ii) Parameter-wise robustness via entropy-sharpness minimization
 
-TODO
+![SoTTA_Figure6](/SoTTA_img/SoTTA_Figure6.PNG)  
+
+#### 관찰: 
+noisy 샘플을 사용한 적응은 모델이 양성 샘플에 적응하는 것을 방해하는 경우가 많다는 것을 관찰함.  
+
+여기서 핵심 질문은 모델이 노이즈가 많은 샘플에 과적합되는 것을 방지하는 방법임.  
+그림 6b는 다음 단락에서 설명하는 Entropy-sharpness minimization(ESM) 결과를 보여줌.  
+ESM을 사용하면 noisy 데이터의 기울기 규범이 높게 유지되며 의도한 대로 적응한 후 양성 샘플의 정확도가 향상됨.  
+
+#### Solution
+모델 매개변수를 noisy 샘플과의 adaptation에 robust하게 만들기 위해서는 모델이 noisy 샘플로 인해 예상치 못한 모델 성능 저하에 회복(resilient)이 되도록 엔트로피 손실(Entropy-Loss) landscape를 더 부드럽게 해야 함.  
+이를 위해 **순진한 엔트로피 손실(Naive entropy-loss)과 엔트로피 손실의 sparpness(선명도)를 공동으로 최소화**하여 noisy 샘플에서 오는 큰 기울기에 의한 가중치 혼란에 대응하여 손실 landscape를 robust하게 만듦.  
+
+구체적으로는 다음과 같이 naive entropy minimization(E, 순수 엔트로피 최소화)를 entropy-sharpness minimization(ESM) 로 대체함.  
+
+![SoTTA_ESM_Formula1](/SoTTA_img/SoTTA_ESM_formula1.PNG)  
+
+여기서 entropy-sharpness(엔트로피 선명도) ES(x, θ)는 L2-norm constraint(L2 제약 조건) ρ을 가진 가중치 혼란 주변의 maximum objective(최대 목적)로 정의됨.  
+이 joint optimization problem(공동 최적화 문제)를 해결하기 위해 [29]와 유사한 **sharpness aware minimization(선명도 인식 최소화)** [4]를 따르며,  
+이는 원래 확률적 경사 하강법(SGD)과 같은 표준 최적화 알고리즘보다 모델의 generalizability(일반화 가능성)을 향상시키는 것을 목표로 함.  
+~~~
+[4] Pierre Foret, Ariel Kleiner, Hossein Mobahi, and Behnam Neyshabur. Sharpness-aware minimization for efficiently improving generalization. In International Conference on Learning
+Representations, 2021.
+
+[29] Shuaicheng Niu, Jiaxiang Wu, Yifan Zhang, Zhiquan Wen, Yaofo Chen, Peilin Zhao, and
+Mingkui Tan. Towards stable test-time adaptation in dynamic wild world. In The Eleventh
+International Conference on Learning Representations, 2023
+~~~
