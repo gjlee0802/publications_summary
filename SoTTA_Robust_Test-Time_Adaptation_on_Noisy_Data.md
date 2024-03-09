@@ -170,7 +170,7 @@ ESM을 사용하면 noisy 데이터의 기울기 규범이 높게 유지되며 �
 
 ![SoTTA_ESM_Formula1](/SoTTA_img/SoTTA_ESM_formula1.PNG)  
 
-여기서 entropy-sharpness(엔트로피 선명도) `ES(x, θ)`는 L2-norm constraint(L2 제약 조건) `ρ`을 가진 가중치 혼란 주변의 maximum objective(최대 목적)로 정의됨.  
+여기서 entropy-sharpness(엔트로피 선명도) `ES(x, θ)`는 L2-norm constraint(L2-norm 제약) `ρ`을 가진 가중치 혼란 주변의 maximum objective(최대 목적)로 정의됨.  
 이 joint optimization problem(공동 최적화 문제)를 해결하기 위해 [29]와 유사한 **sharpness aware minimization(선명도 인식 최소화)** [4]를 따르며,  
 이는 원래 확률적 경사 하강법(SGD)과 같은 표준 최적화 알고리즘보다 모델의 generalizability(일반화 가능성)을 향상시키는 것을 목표로 함.  
 ~~~
