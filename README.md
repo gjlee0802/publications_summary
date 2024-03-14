@@ -7,3 +7,6 @@
 
 ## Mobile HCI
 - [Knocker](https://github.com/gjlee0802/publications_summary/blob/main/Knocker_Vibroacoustic-based_Object_Recognition_with_Smartphones.md)
+
+## 논문 서치
+[2023 CHI Best Papers](https://programs.sigchi.org/chi/2023/awards/best-papers)
