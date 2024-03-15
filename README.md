@@ -10,3 +10,6 @@
 
 ## 논문 서치
 [2023 CHI Best Papers](https://programs.sigchi.org/chi/2023/awards/best-papers)
+
+## 예정
+- MentalLLM: https://dl.acm.org/doi/10.1145/3643540
