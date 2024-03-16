@@ -1,8 +1,8 @@
 # Generalization bounds에 대해 이해하기 위한 내용 정리
 
-## PAC Beyesian Generalization Bound
+## - PAC Beyesian Generalization Bound
 
-## KL divergence
+## - KL divergence(KLD)
 ~~~
 참고 자료
 https://hwiyong.tistory.com/408
@@ -52,8 +52,17 @@ KL-Divergence = Cross-Entropy - Entropy
 
 ### KLD와 가우시안 분포
 ~~~
+참고 자료
+https://stats.stackexchange.com/questions/7440/kl-divergence-between-two-univariate-gaussians
 https://simpling.tistory.com/33
 ~~~
 
 두 개의 서로 다른 Gaussian 분포를 가정했을 때 KL-divergence(Kullback–Leibler divergence, KLD)를 구하는 유도과정에 대해 알아봄.  
 
+아래처럼 유도과정을 정리함.  
+![KLD_and_GaussianDistribution1](KLD_and_GaussianDistribution/KLD_and_GaussianDistribution1.jpg)  
+![KLD_and_GaussianDistribution2](KLD_and_GaussianDistribution/KLD_and_GaussianDistribution2.jpg)  
+![KLD_and_GaussianDistribution3](KLD_and_GaussianDistribution/KLD_and_GaussianDistribution3.jpg)  
+![KLD_and_GaussianDistribution4](KLD_and_GaussianDistribution/KLD_and_GaussianDistribution4.jpg)  
+![KLD_and_GaussianDistribution5](KLD_and_GaussianDistribution/KLD_and_GaussianDistribution5.jpg)  
+![KLD_and_GaussianDistribution6](KLD_and_GaussianDistribution/KLD_and_GaussianDistribution6.jpg)  
