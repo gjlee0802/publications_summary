@@ -60,9 +60,9 @@ https://simpling.tistory.com/33
 두 개의 서로 다른 Gaussian 분포를 가정했을 때 KL-divergence(Kullback–Leibler divergence, KLD)를 구하는 유도과정에 대해 알아봄.  
 
 아래처럼 유도과정을 정리함.  
-![KLD_and_GaussianDistribution1](KLD_and_GaussianDistribution/KLD_and_GaussianDistribution1.jpg)  
-![KLD_and_GaussianDistribution2](KLD_and_GaussianDistribution/KLD_and_GaussianDistribution2.jpg)  
-![KLD_and_GaussianDistribution3](KLD_and_GaussianDistribution/KLD_and_GaussianDistribution3.jpg)  
-![KLD_and_GaussianDistribution4](KLD_and_GaussianDistribution/KLD_and_GaussianDistribution4.jpg)  
-![KLD_and_GaussianDistribution5](KLD_and_GaussianDistribution/KLD_and_GaussianDistribution5.jpg)  
-![KLD_and_GaussianDistribution6](KLD_and_GaussianDistribution/KLD_and_GaussianDistribution6.jpg)  
+<img src="https://github.com/gjlee0802/publications_summary/assets/49184890/5396369b-a39e-4da0-852d-40e9c8f50bd5" width="400" height="600"/>  
+<img src="https://github.com/gjlee0802/publications_summary/assets/49184890/a7529796-ce90-4ec7-94ce-14d7962a8b82" width="400" height="600"/>  
+<img src="https://github.com/gjlee0802/publications_summary/assets/49184890/92d229eb-a94c-455a-b373-638afb05db4e" width="400" height="600"/>  
+<img src="https://github.com/gjlee0802/publications_summary/assets/49184890/d74067dc-bed2-416c-b821-08e72afa2a0c" width="400" height="600"/>  
+<img src="https://github.com/gjlee0802/publications_summary/assets/49184890/fcd1eb7f-fa80-4f31-9909-5865d202e831" width="400" height="600"/>  
+<img src="https://github.com/gjlee0802/publications_summary/assets/49184890/d2bb8d4b-363b-4fd8-8000-495836aa6432" width="400" height="600"/>  
