@@ -4,7 +4,7 @@
 ## Test-Time Adaptation / Generalization
 - [SAM(Sharpness-Aware Minimization)](https://github.com/gjlee0802/publications_summary/blob/main/Sharpness-Aware_Minimization_for_Efficiently_Improving_Generalization.md)
 - [SoTTA(Robust Test-Time Adaptation)](https://github.com/gjlee0802/publications_summary/blob/main/SoTTA_Robust_Test-Time_Adaptation_on_Noisy_Data.md)
-
+- [Generalization bounds에 대해 이해하기 위한 사전 개념 정리](https://github.com/gjlee0802/publications_summary/blob/main/generalization_bounds.md)
 ## Mobile HCI
 - [Knocker](https://github.com/gjlee0802/publications_summary/blob/main/Knocker_Vibroacoustic-based_Object_Recognition_with_Smartphones.md)
 
