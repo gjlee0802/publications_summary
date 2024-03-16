@@ -47,3 +47,13 @@ q : 모델이 예측한 확률 ; 확률분포 P로 근사될 분포 Q
 KL-Divergence = Cross-Entropy - Entropy
 ~~~
 
+결과적으로 모델이 예측한 확률분포(Q)의 정보량과 실제 확률분포(P) 정보량의 차이를 의미함.  
+**이에 대한 차이(정보량)를 분포가 유사한지에 대한 정도로 다시 해석**할 수 있음.  
+
+### KLD와 가우시안 분포
+~~~
+https://simpling.tistory.com/33
+~~~
+
+두 개의 서로 다른 Gaussian 분포를 가정했을 때 KL-divergence(Kullback–Leibler divergence, KLD)를 구하는 유도과정에 대해 알아봄.  
+
