@@ -12,4 +12,5 @@
 [2023 CHI Best Papers](https://programs.sigchi.org/chi/2023/awards/best-papers)
 
 ## 예정
+- Generalization bounds for deep learning: https://arxiv.org/pdf/2012.04115.pdf
 - MentalLLM: https://dl.acm.org/doi/10.1145/3643540
