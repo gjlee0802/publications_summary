@@ -13,6 +13,8 @@
 - [Microsoft HCI ACM](https://dl.acm.org/topic/ccs2012/10003120.10003121?expand=all&ContribAffiliationId=10.1145%2Finstitution-60021726)
 
 ## 관심
+### HCI
 - i'sFree: Eyes-Free Gesture Typing via a Touch-Enabled Remote Control(CHI-2019-Google LLC): https://dl.acm.org/doi/pdf/10.1145/3290605.3300678
+- Enabling Conversational Interaction with Mobile UI using Large Language Models (MobileHCI-LLM): https://dl.acm.org/doi/10.1145/3544548.3580895
 - Generalization bounds for deep learning: https://arxiv.org/pdf/2012.04115.pdf
 - MentalLLM: https://dl.acm.org/doi/10.1145/3643540
