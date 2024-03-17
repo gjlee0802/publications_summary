@@ -28,38 +28,42 @@ Our goal : population loss를 가장 최소화하는 모델 파라미터 w를 �
 
 ![SAM_generalization_bound1](/SAM_img/SAM_generalization_bound1.PNG)  
 
-**PAC(probably approximately correct) Bayesian generalization bound** 기반으로 generalization bound 산정을 하여 population loss에 대한 upper bound를 정함.  
+- **PAC(probably approximately correct) Bayesian generalization bound** 기반으로 generalization bound 산정을 하여 population loss에 대한 upper bound(상한)를 정함.  
 
 ![SAM_generalization_bound2](/SAM_img/SAM_generalization_bound2.PNG)  
-
-h는 strictly 증가 함수
+- **ϵ, epsilon은 perturbation**을 표현한 것임.
+- h는 양의 실수에서 양의 실수로 엄격하게 증가하는 함수
 
 ![SAM_generalization_bound3](/SAM_img/SAM_generalization_bound3.PNG)  
-
-대괄호 항: S에 대해서 계산되는 training loss가 w 근처에서 얼마나 빠르게 변동(증가)를 하는가를 의미 -> 곧 sharpness를 의미함.  
+- weight perturb (loss가 커지게 만드는)를 줬을 때의 loss와 그렇지 않았을 때의 loss 차이를 보는 것으로 해석할 수 있음.
+- perturb에 민감하면 (loss landscape가 sharp하면) 차이가 커지고 둔감하면 (loss landscape가 flat하면) 차이가 작아짐.
+- **대괄호 항**: S에 대해서 계산되는 training loss가 w 근처에서 얼마나 빠르게 변동(증가)를 하는가를 의미 -> **곧 sharpness를 의미함.**  
 
 ![SAM_generalization_bound4](/SAM_img/SAM_generalization_bound4.PNG)  
 
-대괄호 항 뒤의 항: w에 대한 training loss와 regularization  
-h term을 일반적인 L2 정규화(regularization)로 계산
+- 대괄호 항 뒤의 항: w에 대한 training loss와 regularization  
+- h term을 일반적인 L2 정규화(regularization)로 계산
 
 ![SAM_solving_problem](/SAM_img/SAM_solving_problem.PNG)
 
-**결과적으로 위의 Sharpness-aware minimization problem을 해결하면 됨.**  
+- **결과적으로 위의 Sharpness-aware minimization problem을 해결하면 됨.**  
 where ρ ≥ 0 is a hyperparameter and p ∈ [1, ∞] (경험적으로 ρ = 2로 하여 L2-norm 계산한 것이 최적의 결과를 냄)  
 
 ![SAM_approximation](/SAM_img/SAM_approximation.PNG)
 
-max에 대한 gradient를 구해야함으로 approximation을 진행함
+- max에 대한 gradient를 구해야함으로 approximation을 진행함
 -> 단순하게 first order Taylor 전개를 진행함.  
 
 ![SAM_ehat_solving_problem](/SAM_img/SAM_ehat_solving_problem.PNG)
 
-여기서 두번째 항의 hessian 계산은 속도를 늦추며 성능을 낮추므로 Drop함(계산에서 제외).  
+- 여기서 두번째 항의 hessian 계산은 속도를 늦추며 성능을 낮추므로 Drop함(계산에서 제외).  
 
 ![SAM_final_gradient_approximation](/SAM_img/SAM_final_gradient_approximation.PNG)
 
-최종적인 구하고자 하는 gradient 전개는 위와 같음
+- 최종적으로 구하고자 하는 gradient 전개는 위와 같음
+
+### 알고리즘
+![SAM_algorithm](/SAM_img/SAM_algorithm.PNG)
 
 ## 성능 비교
 - SVHN과 Fasion-MNIST에서도 성능 개선을 보임
