@@ -11,6 +11,8 @@
 ## 논문 서치
 [2023 CHI Best Papers](https://programs.sigchi.org/chi/2023/awards/best-papers)
 
-## 예정
+## 관심
 - Generalization bounds for deep learning: https://arxiv.org/pdf/2012.04115.pdf
+- The intriguing role of module criticality in the generalization of deep networks: https://arxiv.org/pdf/1912.00528.pdf
+- PAC-Bayes & Margins: https://proceedings.neurips.cc/paper_files/paper/2002/file/68d309812548887400e375eaa036d2f1-Paper.pdf
 - MentalLLM: https://dl.acm.org/doi/10.1145/3643540
