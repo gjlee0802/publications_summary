@@ -9,10 +9,10 @@
 - [Knocker](https://github.com/gjlee0802/publications_summary/blob/main/Knocker_Vibroacoustic-based_Object_Recognition_with_Smartphones.md)
 
 ## 논문 서치
-[2023 CHI Best Papers](https://programs.sigchi.org/chi/2023/awards/best-papers)
+- [2023 CHI Best Papers](https://programs.sigchi.org/chi/2023/awards/best-papers)
+- [Microsoft HCI ACM](https://dl.acm.org/topic/ccs2012/10003120.10003121?expand=all&ContribAffiliationId=10.1145%2Finstitution-60021726)
 
 ## 관심
+- i'sFree: Eyes-Free Gesture Typing via a Touch-Enabled Remote Control(CHI-2019-Google LLC): https://dl.acm.org/doi/pdf/10.1145/3290605.3300678
 - Generalization bounds for deep learning: https://arxiv.org/pdf/2012.04115.pdf
-- The intriguing role of module criticality in the generalization of deep networks: https://arxiv.org/pdf/1912.00528.pdf
-- PAC-Bayes & Margins: https://proceedings.neurips.cc/paper_files/paper/2002/file/68d309812548887400e375eaa036d2f1-Paper.pdf
 - MentalLLM: https://dl.acm.org/doi/10.1145/3643540
