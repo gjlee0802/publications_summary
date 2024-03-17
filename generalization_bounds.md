@@ -1,8 +1,6 @@
 # Generalization bounds에 대해 이해하기 위한 내용 정리
 
-## PAC Beyesian Generalization Bound
-
-## KL divergence
+## - KL divergence(KLD)
 ~~~
 참고 자료
 https://hwiyong.tistory.com/408
@@ -21,12 +19,8 @@ KLD는 값이 낮을수록 두 분포가 유사하다라고 해석함.
 
 ### KLD와 Cross Entropy 관계
 
-정보이론에서 정보량은 다음을 효과적으로 표현하기 위해 로그를 사용하여 표현함.
-
-확률이 높을수록 → 매우 당연하게 일어날 사건
-확률이 낮으면 → 자주 일어나지 않는 특별한 사건
-
-우리가 아는 엔트로피는 평균 정보량을 나타내므로 아래와 같이 표현됨.
+정보이론에서 정보량은 효과적으로 표현하기 위해 로그를 사용하여 표현함.  
+우리가 아는 엔트로피는 평균 정보량을 나타내므로 아래와 같이 표현됨.  
 
 ![Entropy](generalization_bounds_img/entropy_formula.png)
 
@@ -52,8 +46,46 @@ KL-Divergence = Cross-Entropy - Entropy
 
 ### KLD와 가우시안 분포
 ~~~
+참고 자료
+https://stats.stackexchange.com/questions/7440/kl-divergence-between-two-univariate-gaussians
 https://simpling.tistory.com/33
 ~~~
 
 두 개의 서로 다른 Gaussian 분포를 가정했을 때 KL-divergence(Kullback–Leibler divergence, KLD)를 구하는 유도과정에 대해 알아봄.  
 
+아래처럼 유도과정을 정리함.  
+<img src="https://github.com/gjlee0802/publications_summary/assets/49184890/5396369b-a39e-4da0-852d-40e9c8f50bd5" width="400" height="600"/>  
+<img src="https://github.com/gjlee0802/publications_summary/assets/49184890/a7529796-ce90-4ec7-94ce-14d7962a8b82" width="400" height="600"/>  
+<img src="https://github.com/gjlee0802/publications_summary/assets/49184890/92d229eb-a94c-455a-b373-638afb05db4e" width="400" height="600"/>  
+<img src="https://github.com/gjlee0802/publications_summary/assets/49184890/d74067dc-bed2-416c-b821-08e72afa2a0c" width="400" height="600"/>  
+<img src="https://github.com/gjlee0802/publications_summary/assets/49184890/fcd1eb7f-fa80-4f31-9909-5865d202e831" width="400" height="600"/>  
+<img src="https://github.com/gjlee0802/publications_summary/assets/49184890/d2bb8d4b-363b-4fd8-8000-495836aa6432" width="400" height="600"/>  
+
+## - PAC Beyesian Generalization Bound
+~~~
+User-friendly introduction to PAC-Bayes bounds: https://arxiv.org/pdf/2110.11216.pdf
+~~~
+### Sharpness-Aware Minimization에서의 PAC generalization bound 활용
+![SAM_PAC_generalization_bound1](generalization_bounds_img/SAM_PAC_generalization_bound1.PNG)
+
+사후 표준 편차 `σQ`가 주어지면 위의 KL divergence를 최소화(최대한 두 분포가 유사하게)하기 위해 사전 표준 편차 `σP`를 선택할 수 있으며, KL을 최소화하는 값을 설정하기 위해 `σP`에 대한 위의 KL의 도함수를 취하고 0으로 설정하여 일반화 경계를 설정할 수 있으나  
+
+위의 방법은 옳지 않음.  
+
+왜냐하면 훈련 데이터 `S`와 `µQ`를 관찰하기 전에 `σP`를 선택해야 하므로 `σQ`는 `S`에 의존할 수 있으므로 이러한 방식으로 `σP`를 최적화하는 것은 허용되지 않음.  
+
+따라서, 위의 방법 대신에 `σP`에 대해 미리 정의된 값 세트를 가지고 그 세트에서 가장 좋은 값을 선택하는 방법을 선택함.  
+
+~~~
+이 테크닉에 대한 논문
+John Langford and Rich Caruana. (not) bounding the true error. NeurlIPs 2002
+https://papers.nips.cc/paper_files/paper/2001/file/98c7242894844ecd6ec94af67ac8247d-Paper.pdf
+~~~
+
+위의 KL과 log 항에 대해 각각 upper bound를 유도하고 둘을 이용하여 위에서 소개된 generalization upper bound를 설정하게 됨.  
+
+![SAM_KL_upper_bound](/generalization_bounds_img/SAM_KL_upper_bound.PNG)
+
+![SAM_log_term_upper_bound](/generalization_bounds_img/SAM_log_term_upper_bound.PNG)
+
+![SAM_PAC_generalization_bound2](generalization_bounds_img/SAM_PAC_generalization_bound2.PNG)
