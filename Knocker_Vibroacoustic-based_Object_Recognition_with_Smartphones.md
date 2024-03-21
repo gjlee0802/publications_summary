@@ -49,6 +49,10 @@ https://nmsl.kaist.ac.kr/pdf/IMWUT19_Knocker.pdf
 - 자동 음성 인식에 일반적으로 사용되는 MFCC는 인간의 청각 시스템에 따라 주파수 대역을 간격을 두어 파생된 널리 사용되는 기능임. MFCC를 사용하는 데 있어 직관적인 이유는 인간이 서로 다른 물체에서 독특한 노크 소리를 식별할 수 있다는 것임.
 
 - 길이-256 FFT로 노크의 방향을 고려하여 가속도계의 x축과 자이로스코프의 z축의 크기 스펙트럼(magnitude spectrum)을 사용함. 더 높은 주파수 분해능을 얻기 위해 자이로스코프 신호의 32개 샘플에 제로 패딩을 적용함. 
+~~~
+제로 패딩과 주파수 분해능에 대한 참고자료
+https://www.bitweenie.com/listings/fft-zero-padding/
+~~~
 
     ![Knocker_Table1](/Knocker_img/Knocker_Table1.PNG)  
 
