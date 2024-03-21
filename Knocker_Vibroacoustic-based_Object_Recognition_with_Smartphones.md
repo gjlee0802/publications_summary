@@ -54,7 +54,8 @@ https://nmsl.kaist.ac.kr/pdf/IMWUT19_Knocker.pdf
 https://www.bitweenie.com/listings/fft-zero-padding/
 ~~~
 
-    ![Knocker_Table1](/Knocker_img/Knocker_Table1.PNG)  
+
+![Knocker_Table1](/Knocker_img/Knocker_Table1.PNG)  
 
 - 이러한 특징은 표 1에 요약되어 있음. 특징 집합은 통계적 특징(평균, 분산 등), 쌍별 밴드 비율(pair-wise band ratio), 도함수와 같은 특징 선택 프로세스와 다양한 특징 집합을 탐색한 후 결정되었음. 그러나 계산 오버헤드를 감수하면서 정확도를 저하시키거나 정확도를 약간만 향상시킴.
 
