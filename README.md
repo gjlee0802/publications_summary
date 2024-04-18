@@ -18,3 +18,5 @@
 - Enabling Conversational Interaction with Mobile UI using Large Language Models (MobileHCI-LLM): https://dl.acm.org/doi/10.1145/3544548.3580895
 - Generalization bounds for deep learning: https://arxiv.org/pdf/2012.04115.pdf
 - MentalLLM: https://dl.acm.org/doi/10.1145/3643540
+### TimeSeries
+- ConvTran: Improving Position Encoding of Transformers for Multivariate Time Series Classification : https://link.springer.com/content/pdf/10.1007/s10618-023-00948-2.pdf
