@@ -14,10 +14,11 @@
 
 ## 관심
 ### HCI
+- Learning to Predict Human Stress Level with Incomplete Sensor Data from Wearable Devices: https://dl.acm.org/doi/10.1145/3357384.3357831
 - i'sFree: Eyes-Free Gesture Typing via a Touch-Enabled Remote Control(CHI-2019-Google LLC): https://dl.acm.org/doi/pdf/10.1145/3290605.3300678
 - Enabling Conversational Interaction with Mobile UI using Large Language Models (MobileHCI-LLM): https://dl.acm.org/doi/10.1145/3544548.3580895
 - Generalization bounds for deep learning: https://arxiv.org/pdf/2012.04115.pdf
 - MentalLLM: https://dl.acm.org/doi/10.1145/3643540
 ### TimeSeries
-- ConvTran: Improving Position Encoding of Transformers for Multivariate Time Series Classification : https://link.springer.com/content/pdf/10.1007/s10618-023-00948-2.pdf
-- TSLANet: Rethinking Transformers for Time Series Representation Learning : https://arxiv.org/pdf/2404.08472.pdf
+- ConvTran: Improving Position Encoding of Transformers for Multivariate Time Series Classification: https://link.springer.com/content/pdf/10.1007/s10618-023-00948-2.pdf
+- TSLANet: Rethinking Transformers for Time Series Representation Learning: https://arxiv.org/pdf/2404.08472.pdf
