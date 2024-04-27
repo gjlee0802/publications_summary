@@ -5,7 +5,9 @@
 - [SAM(Sharpness-Aware Minimization)](https://github.com/gjlee0802/publications_summary/blob/main/Sharpness-Aware_Minimization_for_Efficiently_Improving_Generalization.md)
 - [SoTTA(Robust Test-Time Adaptation)](https://github.com/gjlee0802/publications_summary/blob/main/SoTTA_Robust_Test-Time_Adaptation_on_Noisy_Data.md)
 - [Generalization bounds에 대해 이해하기 위한 사전 개념 정리](https://github.com/gjlee0802/publications_summary/blob/main/generalization_bounds.md)
-## Mobile HCI
+
+## HCI
+- [Engineering digital biomarkers of interstitial glucose from noninvasive](https://github.com/gjlee0802/publications_summary/blob/main/Engineering_digital_biomarkers_of_interstitial_glucose.md)
 - [Knocker](https://github.com/gjlee0802/publications_summary/blob/main/Knocker_Vibroacoustic-based_Object_Recognition_with_Smartphones.md)
 
 ## 논문 서치
@@ -14,6 +16,7 @@
 
 ## 관심
 ### HCI
+- Engineering digital biomarkers of interstitial glucose from noninvasive smartwatches: https://www.nature.com/articles/s41746-021-00465-w
 - OpenSense: A Platform for Multimodal Data Acquisition and Behavior Perception: https://dl.acm.org/doi/10.1145/3382507.3418832
 - Deploying a robotic positive psychology coach to improve college students’ psychological well-being: https://link.springer.com/article/10.1007/s11257-022-09337-8
 - Learning to Predict Human Stress Level with Incomplete Sensor Data from Wearable Devices: https://dl.acm.org/doi/10.1145/3357384.3357831
