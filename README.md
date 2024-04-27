@@ -7,7 +7,7 @@
 - [Generalization bounds에 대해 이해하기 위한 사전 개념 정리](https://github.com/gjlee0802/publications_summary/blob/main/generalization_bounds.md)
 
 ## HCI
-- [Engineering digital biomarkers of interstitial glucose from noninvasive](https://github.com/gjlee0802/publications_summary/blob/main/Engineering_digital_biomarkers_of_interstitial_glucose.md)
+- [Engineering digital biomarkers of interstitial glucose from noninvasive(비침습적 스마트워치로부터 간질성 포도당의 디지털 바이오마커 개발)](https://github.com/gjlee0802/publications_summary/blob/main/Engineering_digital_biomarkers_of_interstitial_glucose.md)
 - [Knocker](https://github.com/gjlee0802/publications_summary/blob/main/Knocker_Vibroacoustic-based_Object_Recognition_with_Smartphones.md)
 
 ## 논문 서치
