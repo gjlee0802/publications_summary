@@ -107,8 +107,16 @@ PersHigh 분포는 적당히 **오른쪽**으로 치우쳐 있고 leptokurtic이
 우리는 데이터 기반 및 도메인 기반 기능 엔지니어링의 조합을 사용하여 **예측 모델에 입력으로 이전에 설명한 문헌을 기반으로 69개의 변수를 엔지니어링**했습니다([보충 표 1](https://static-content.springer.com/esm/art%3A10.1038%2Fs41746-021-00465-w/MediaObjects/41746_2021_465_MOESM1_ESM.pdf)).  
 이 변수들은 비침습적 웨어러블, 식품 일지 및 인구 통계 전자 보고서에서 수집된 데이터를 사용하여 구축되었습니다. 측정에는 **스트레스, 일주기 리듬, 식단, 활동 및 운동, 심박수, 피부 온도 및 생물학적 성별의 지표가 포함**되었습니다.  
 
-#### 3.2.3. 
+#### 3.2.3. Classification (PersHigh/PersNorm/PersLow)
 우리는 CGM 측정의 개인화된 롤링 기반을 기반으로 PersHigh, PersLow 또는 PersNorm으로 분류된 개인 내 excursion의 기본 진위를 정의했습니다.  
 class-balanced 데이터셋(N = 8666)을 사용하여 **PersLow, PersHigh 및 PersNorm 간 포도당을 분류하는 multi-class 모델을 개발**했습니다.  
-**계층화된 k-fold cross validation을 반복한 decision tree classifier는 84.3 ± 0.013%의 정확도를 달성**했습니다(recall = 84.3 ± 0.013%; accuracy = 84.5 ± 0.013%; weighted F1 Score = 84.3 ± 0.013%; R2 = 0.505 ± 0.050) (confusion matrix 참고).  
+**계층화된 k-fold cross validation을 반복한 decision tree classifier는 84.3 ± 0.013%의 정확도를 달성**했습니다(recall = 84.3 ± 0.013%; accuracy = 84.5 ± 0.013%; weighted F1 Score = 84.3 ± 0.013%; R2 = 0.505 ± 0.050).  
 ![Fig4](./digital_biomarkers_of_interstitial_glucose_img/Fig4.PNG)  
+70/30 TT split을 사용한 decision tree classifier의 confusion matrix는 그림 4에 나와 있습니다. 세 가지 간질 포도당 클래스 각각에 대한 클래스별 정확도는 유사했습니다:  
+PersHigh 포도당의 클래스 정확도는 82.6%, PersNorm의 클래스 정확도는 81.3%, PersLow의 클래스 정확도는 82.1%였습니다.  
+**decision tree 모델은 모두 logistic regression 분석보다 성능이 뛰어났습니다**(accuracy =52.0%; 리콜=52.0%; 정밀도=52.3%; F1 점수=52.0%; R2 = 0(R2의 계산 방법은 0으로 임계값을 지정한 음의 값을 활성화함).  
+**이는 매우 정확한 분류를 수행하기 위해 데이터의 더 복잡한 관계를 캡처해야 함을 나타냅니다**(표 2).  
+![Table2](./digital_biomarkers_of_interstitial_glucose_img/Table2.PNG)  
+
+### 3.2.4. Glucose prediction
+TODO
