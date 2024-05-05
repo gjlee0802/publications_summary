@@ -32,7 +32,7 @@
 - MentalLLM: https://dl.acm.org/doi/10.1145/3643540
 ### TimeSeries
 - ConvTran: Improving Position Encoding of Transformers for Multivariate Time Series Classification: https://link.springer.com/content/pdf/10.1007/s10618-023-00948-2.pdf
-- TSLANet: Rethinking Transformers for Time Series Representation Learning: https://arxiv.org/pdf/2404.08472.pdf
+- TSLANet: Rethinking Transformers for Time Series Representation Learning, **ICML**: https://arxiv.org/pdf/2404.08472.pdf
 ### DeepLearning
 - Generalization bounds for deep learning: https://arxiv.org/pdf/2012.04115.pdf
 ### MachineLearning
