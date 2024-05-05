@@ -34,3 +34,5 @@
 - TSLANet: Rethinking Transformers for Time Series Representation Learning: https://arxiv.org/pdf/2404.08472.pdf
 ### DeepLearning
 - Generalization bounds for deep learning: https://arxiv.org/pdf/2012.04115.pdf
+### MachineLearning
+- KAN: Kolmogorov–Arnold Networks: https://arxiv.org/pdf/2404.19756  
