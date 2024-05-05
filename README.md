@@ -9,6 +9,7 @@
 ## HCI
 ### 비침습 혈당 모니터링
 - [Engineering digital biomarkers of interstitial glucose from noninvasive. Bent et al., npj Digital Health, 2023 (비침습적 스마트워치로부터 간질성 포도당의 디지털 바이오마커 개발)](https://github.com/gjlee0802/publications_summary/blob/main/Engineering_digital_biomarkers_of_interstitial_glucose.md)
+    - [CGM Dataset](https://github.com/DigitalBiomarkerDiscoveryPipeline/Digital_Health_Data_Repository/tree/main/Continuous%20Glucose%20Monitoring%20(CGM)/Dataset_GlycemiaWatch)
 
 - ["My blood sugar is higher on the weekends": Finding a Role for Context and Context-Awareness in the Design of Health Self-Management Technology](https://github.com/gjlee0802/publications_summary/blob/main/Finding_a_Role_for_Context_and_Context-Awareness_in_the_Design_of_Health_Self-Management_Technology.md)
 
