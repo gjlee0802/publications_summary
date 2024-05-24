@@ -16,6 +16,8 @@
 - [참고 : ETRI 비침습 연속혈당 모니터링 기술동향 - 2021.10.01](https://ettrends.etri.re.kr/ettrends/192/0905192002/)
 ### Mobile HCI
 - [Knocker](https://github.com/gjlee0802/publications_summary/blob/main/Knocker_Vibroacoustic-based_Object_Recognition_with_Smartphones.md)
+### Digital medicine
+- [Nature digital medicine articles](https://www.nature.com/npjdigitalmed/articles)
 
 ## 논문 서치
 - [2024 CHI Best Papers](https://programs.sigchi.org/chi/2024/awards/best-papers)
