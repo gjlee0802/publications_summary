@@ -11,12 +11,13 @@
 - [Engineering digital biomarkers of interstitial glucose from noninvasive. Bent et al., npj Digital Health, 2023 (비침습적 스마트워치로부터 간질성 포도당의 디지털 바이오마커 개발)](https://github.com/gjlee0802/publications_summary/blob/main/Engineering_digital_biomarkers_of_interstitial_glucose.md)
     - [CGM&Wearable Dataset](https://github.com/DigitalBiomarkerDiscoveryPipeline/Digital_Health_Data_Repository/tree/main/Continuous%20Glucose%20Monitoring%20(CGM)/Dataset_GlycemiaWatch)
 
-- ["My blood sugar is higher on the weekends": Finding a Role for Context and Context-Awareness in the Design of Health Self-Management Technology](https://github.com/gjlee0802/publications_summary/blob/main/Finding_a_Role_for_Context_and_Context-Awareness_in_the_Design_of_Health_Self-Management_Technology.md)
+- ["My blood sugar is higher on the weekends": Finding a Role for Context and Context-Awareness in the Design of Health Self-Management Technology. Shriti Raj, Kelsey Toporski.](https://github.com/gjlee0802/publications_summary/blob/main/Finding_a_Role_for_Context_and_Context-Awareness_in_the_Design_of_Health_Self-Management_Technology.md)
 
-- [Digital health application integrating wearable data and behavioral patterns improves metabolic health](https://www.nature.com/articles/s41746-023-00956-y)
+- [Digital health application integrating wearable data and behavioral patterns improves metabolic health. Ashkan Dehghani Zahedani, Tracey McLaughlin.](https://www.nature.com/articles/s41746-023-00956-y)
 
 - [참고 : ETRI 비침습 연속혈당 모니터링 기술동향 - 2021.10.01](https://ettrends.etri.re.kr/ettrends/192/0905192002/)
-- [Comparative Efficacy of Commercial Wearables for Circadian Rhythm Home Monitoring from Activity, Heart Rate, and Core Body Temperature](https://arxiv.org/html/2404.03408v1)
+- [Comparative Efficacy of Commercial Wearables for Circadian Rhythm Home Monitoring from Activity, Heart Rate, and Core Body Temperature. Fan Wu, Patrick Langer.](https://arxiv.org/html/2404.03408v1)
+- [Data quality evaluation in wearable monitoring. Sebastian Böttcher, Solveig Vieluf](https://www.nature.com/articles/s41598-022-25949-x)
 ### Mobile HCI
 - [Knocker](https://github.com/gjlee0802/publications_summary/blob/main/Knocker_Vibroacoustic-based_Object_Recognition_with_Smartphones.md)
 ### Digital medicine
