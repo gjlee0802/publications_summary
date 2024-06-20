@@ -49,6 +49,8 @@ Representations, 2021.](https://arxiv.org/pdf/2010.01412.pdf)
 - TSLANet: Rethinking Transformers for Time Series Representation Learning, **ICML**: https://arxiv.org/pdf/2404.08472.pdf
 - A Transformer-based Framework for Multivariate Time Series Representation Learning. George Zerveas, Srideepika Jayaraman : https://arxiv.org/abs/2010.02803
     - https://github.com/gzerveas/mvts_transformer
+- SAMformer: Unlocking the Potential of Transformers in Time Series Forecasting with Sharpness-Aware Minimization and Channel-Wise Attention. Romain Ilbert, Ambroise Odonnat. ICML'24 : https://arxiv.org/abs/2402.10198
+    - https://github.com/romilbert/samformer.git
 ### DeepLearning
 - Generalization bounds for deep learning: https://arxiv.org/pdf/2012.04115.pdf
 ### MachineLearning
