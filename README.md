@@ -26,10 +26,9 @@ Representations, 2021.](https://arxiv.org/pdf/2010.01412.pdf)
 - [Data quality evaluation in wearable monitoring. Sebastian Böttcher, Solveig Vieluf](https://www.nature.com/articles/s41598-022-25949-x)
 ### Mobile HCI
 - [Knocker](https://github.com/gjlee0802/publications_summary/blob/main/Knocker_Vibroacoustic-based_Object_Recognition_with_Smartphones.md)
-### Digital medicine
-- [Nature digital medicine articles](https://www.nature.com/npjdigitalmed/articles)
 
 ## 논문 서치
+- [Nature digital medicine articles](https://www.nature.com/npjdigitalmed/articles)
 - [2024 CHI Best Papers](https://programs.sigchi.org/chi/2024/awards/best-papers)
 - [2023 CHI Best Papers](https://programs.sigchi.org/chi/2023/awards/best-papers)
 
