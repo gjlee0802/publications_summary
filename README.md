@@ -13,6 +13,7 @@ Representations, 2021.](https://arxiv.org/pdf/2010.01412.pdf)
 ### Wearable HCI
 - [Engineering digital biomarkers of interstitial glucose from noninvasive. Bent et al., npj Digital Health, 2021](https://www.nature.com/articles/s41746-021-00465-w)
     - [My Note](https://github.com/gjlee0802/publications_summary/blob/main/Engineering_digital_biomarkers_of_interstitial_glucose.md)
+    - [My Code](https://github.com/gjlee0802/engineering-digital-biomarkers)
     - [CGM&Wearable Dataset](https://github.com/DigitalBiomarkerDiscoveryPipeline/Digital_Health_Data_Repository/tree/main/Continuous%20Glucose%20Monitoring%20(CGM)/Dataset_GlycemiaWatch)
 
 - ["My blood sugar is higher on the weekends": Finding a Role for Context and Context-Awareness in the Design of Health Self-Management Technology. Shriti Raj, Kelsey Toporski.](https://dl.acm.org/doi/abs/10.1145/3290605.3300349)
@@ -31,6 +32,7 @@ Representations, 2021.](https://arxiv.org/pdf/2010.01412.pdf)
 - [Nature digital medicine articles](https://www.nature.com/npjdigitalmed/articles)
 - [2024 CHI Best Papers](https://programs.sigchi.org/chi/2024/awards/best-papers)
 - [2023 CHI Best Papers](https://programs.sigchi.org/chi/2023/awards/best-papers)
+- [Ashkan Dehghani Zahedani - January AI](https://scholar.google.co.kr/scholar?q=Ashkan+Dehghani+Zahedani&hl=ko&as_sdt=0%2C5&as_vis=1&as_ylo=2019&as_yhi=2024)
 
 ## 관심
 ### HCI
