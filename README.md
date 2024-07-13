@@ -56,4 +56,5 @@ Representations, 2021.](https://arxiv.org/pdf/2010.01412.pdf)
 ### DeepLearning
 - Generalization bounds for deep learning: https://arxiv.org/pdf/2012.04115.pdf
 ### MachineLearning
-- KAN: Kolmogorov–Arnold Networks: https://arxiv.org/pdf/2404.19756  
+- KAN: Kolmogorov–Arnold Networks: https://arxiv.org/pdf/2404.19756
+- ESM: Reed Larson and Mihaly Csikszentmihalyi. 2014. The Experience Sampling Method. Springer Netherlands, Dordrecht, 21–34. https://doi.org/10.1007/978-94-017-9088-8_2
