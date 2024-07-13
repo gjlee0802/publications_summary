@@ -27,6 +27,9 @@ Representations, 2021.](https://arxiv.org/pdf/2010.01412.pdf)
 - [Data quality evaluation in wearable monitoring. Sebastian Böttcher, Solveig Vieluf](https://www.nature.com/articles/s41598-022-25949-x)
 ### Mobile HCI
 - [Knocker](https://github.com/gjlee0802/publications_summary/blob/main/Knocker_Vibroacoustic-based_Object_Recognition_with_Smartphones.md)
+### Else
+- ESM: Reed Larson and Mihaly Csikszentmihalyi. 2014. The Experience Sampling Method. Springer Netherlands, Dordrecht, 21–34. https://doi.org/10.1007/978-94-017-9088-8_2
+
 
 ## 논문 서치
 - [Nature digital medicine articles](https://www.nature.com/npjdigitalmed/articles)
@@ -57,4 +60,3 @@ Representations, 2021.](https://arxiv.org/pdf/2010.01412.pdf)
 - Generalization bounds for deep learning: https://arxiv.org/pdf/2012.04115.pdf
 ### MachineLearning
 - KAN: Kolmogorov–Arnold Networks: https://arxiv.org/pdf/2404.19756
-- ESM: Reed Larson and Mihaly Csikszentmihalyi. 2014. The Experience Sampling Method. Springer Netherlands, Dordrecht, 21–34. https://doi.org/10.1007/978-94-017-9088-8_2
