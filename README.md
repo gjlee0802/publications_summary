@@ -10,6 +10,7 @@ Representations, 2021.](https://arxiv.org/pdf/2010.01412.pdf)
 - [Generalization bounds에 대해 이해하기 위한 사전 개념 정리](https://github.com/gjlee0802/publications_summary/blob/main/generalization_bounds.md)
 
 ## HCI
+### Counterfactual(CF) evaluation
 ### Wearable HCI
 - [Engineering digital biomarkers of interstitial glucose from noninvasive. Bent et al., npj Digital Health, 2021](https://www.nature.com/articles/s41746-021-00465-w)
     - [My Note](https://github.com/gjlee0802/publications_summary/blob/main/Engineering_digital_biomarkers_of_interstitial_glucose.md)
