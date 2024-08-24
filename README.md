@@ -26,6 +26,7 @@ Representations, 2021.](https://arxiv.org/pdf/2010.01412.pdf)
 - [참고 : ETRI 비침습 연속혈당 모니터링 기술동향 - 2021.10.01](https://ettrends.etri.re.kr/ettrends/192/0905192002/)
 - [Comparative Efficacy of Commercial Wearables for Circadian Rhythm Home Monitoring from Activity, Heart Rate, and Core Body Temperature. Fan Wu, Patrick Langer.](https://arxiv.org/html/2404.03408v1)
 - [Data quality evaluation in wearable monitoring. Sebastian Böttcher, Solveig Vieluf](https://www.nature.com/articles/s41598-022-25949-x)
+- [The Effectiveness of Wearable Devices Using Artificial Intelligence for Blood Glucose Level Forecasting or Prediction: Systematic Review. Arfan Ahmed, Javaid Sheikh.](https://www.jmir.org/2023/1/e40259)
 ### Mobile HCI
 - [Knocker](https://github.com/gjlee0802/publications_summary/blob/main/Knocker_Vibroacoustic-based_Object_Recognition_with_Smartphones.md)
 ### Else
